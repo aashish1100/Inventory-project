@@ -4,23 +4,29 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+const ejsmate = require("ejs-mate");
+app.engine("ejs",ejsmate);
+//ejs path setiing
+const path = require('path');
+app.set("view engine","ejs");
+app.set("views",path.join(__dirname,"views"));
 // Middleware to parse JSON data
 app.use(express.json());
 
 
 // Define basic routes
 app.get('/', (req, res) => {
-  res.send('Welcome to the Inventory System');
+    res.render('listings/index.ejs');
 });
 
 app.get("/login",(req,res)=>
 {
-    res.send("login page");
+    res.render("users/login.ejs");
 })
 
-app.get("/singup",(req,res)=>
+app.get("/signup",(req,res)=>
 {
-    res.send("singup page");
+    res.render("users/signup.ejs");
 })
 
 // Handle 404 errors

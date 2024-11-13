@@ -1,0 +1,58 @@
+
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #ffffff;
+}
+h1{
+    text-align: center;
+}
+.body-container{
+    flex:1;
+    margin: 0 50px;
+    padding-top: 80px;
+    
+}
+body>h1{
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+.dropdown-toggle.active {
+
+    font-weight: 300; /* Optional, to make it stand out */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:990px)
+{
+  .body-container{
+      margin: 0 25px;
+  }
+  .listing-form{
+    margin: 10px 100px 50px;
+  }
+  .pro {
+    width: 40%;
+}
+.review{
+    width: 40%;
+}
+
+}

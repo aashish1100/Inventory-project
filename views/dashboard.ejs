@@ -1,0 +1,61 @@
+<% layout("layouts/boilerplate.ejs") %>
+<div class="container mt-4">
+    <div class="row">
+      <!-- Dashboard Cards -->
+      <div class="col-md-3">
+        <div class="card bg-info text-white mb-4">
+          <div class="card-body">Total Items</div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-warning text-white mb-4">
+          <div class="card-body">Out of Stock</div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-success text-white mb-4">
+          <div class="card-body">New Orders</div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-danger text-white mb-4">
+          <div class="card-body">Pending Orders</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inventory Table -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5>Inventory Items</h5>
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>SKU</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>12345</td>
+              <td>Item Name 1</td>
+              <td>Category 1</td>
+              <td>50</td>
+              <td>$10</td>
+              <td>
+                <button class="btn btn-sm btn-primary">Edit</button>
+                <button class="btn btn-sm btn-danger">Delete</button>
+              </td>
+            </tr>
+            <!-- Additional items go here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

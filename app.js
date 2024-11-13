@@ -10,6 +10,8 @@ app.engine("ejs",ejsmate);
 const path = require('path');
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
+app.use(express.static('public'));
+
 // Middleware to parse JSON data
 app.use(express.json());
 
@@ -18,7 +20,10 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.render('listings/index.ejs');
 });
-
+app.get("/dashboard",(req,res)=>
+{
+  res.render("dashboard.ejs")
+})
 app.get("/login",(req,res)=>
 {
     res.render("users/login.ejs");

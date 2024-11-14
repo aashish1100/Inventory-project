@@ -4,7 +4,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    color: #ffffff;
+   color: black;
 }
 h1{
     text-align: center;

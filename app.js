@@ -20,6 +20,10 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.render('listings/index.ejs');
 });
+app.get("/add",(req,res)=>
+{
+  res.render("add.ejs");
+})
 app.get("/dashboard",(req,res)=>
 {
   res.render("dashboard.ejs")
